@@ -1,0 +1,14 @@
+{
+  "task": "Write a humanized cover letter using the resume to match the skills from the last prompt.",
+  "first paragraph": "short and brief impact statement. Lead with an impressive accomplishment.",
+  "secound paragraph": "Mention one experience from the resume. Address multiple responsibilities and cite duties from the resume with examples of how you are qualifed.",
+  "third paragraph": "Mention another experiences from the resume. Address multiple responsibilities and cite duties from the resume with examples of how you are qualifed.",
+  "fourth paragraph": "Address multiple requirements and cite duties from the resume with examples of how you are qualifed.",
+  "fifth paragraph": "Demonstrate that you understand the company's mission. Make up a reason for why your goals align with theirs and connect to the company culture. Finish with plan to achieve these goals.",
+  "sixth paragraph": "Thank them for taking the time to read the cover letter. Mention how excited your are to start and say you have some ideas to improve the company.",
+  "length": "must be around 500 words",
+  "tone": "Be confident, avoid adverbs and human. Convey enthusiam for the company. Express passion for the job.",
+  "header": "Dear Hiring Manager",
+  "no subject line": "do not include a subject line",
+  "no extra comments": "no extra comments"
+}

@@ -1,0 +1,186 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy CV/Resume
+% XeLaTeX Template
+% Version 1.0 (5/5/2014)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Debarghya Das (http://www.debarghyadas.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper]{deedy-resume} 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+
+\namesection{<< first_name >>}{<< last_name >>}{<<email>>}
+
+%----------------------------------------------------------------------------------------
+%	LEFT COLUMN
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.75\textwidth} 
+
+
+
+%------------------------------------------------
+% Experience
+%------------------------------------------------
+
+\section{Experience}
+
+<% for job in my_job %>
+\sectionspace 
+\runsubsection{<<job['job title']>>} \\
+\ljobname{<< job['company']>>}
+\location{<<job['start']>> - <<job['end']>>}
+%\location{Remote}
+<% if loop.index <=1 %>
+\vspace{\topsep}
+<% endif %>
+\begin{tightitemize}
+     <% for item in job['duties'] %>
+      \item <<item>>
+     <% endfor %>
+\end{tightitemize}
+
+<% endfor %>
+
+
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+<% if my_project %>
+\section{Projects}
+<% for proj in my_project %>
+\sectionspace 
+\runsubsection{<<proj['job title']>>} \\
+\location{<<proj['start']>> - <<proj['end']>>}
+\begin{tightitemize}
+     <% for item in proj['duties'] %>
+      \item <<item>>
+     <% endfor %>
+\end{tightitemize}
+<% endfor %>
+<% endif %>
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the left column
+\hfill
+%
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN
+%----------------------------------------------------------------------------------------
+%
+\begin{minipage}[t]{0.24\textwidth} 
+%------------------------------------------------
+% Contact
+%------------------------------------------------
+\section{Contact} 
+%\runsubsection{<< email >>}
+\location{<< phone_number >>}
+<% if location %>
+<<location>>
+<% endif %>
+
+%------------------------------------------------
+% Education
+%------------------------------------------------
+
+\section{Education} 
+<% for edu in my_edu %>
+\sectionspace 
+\subsection{<< edu['degree'] >> in << edu['major'] >>} 
+\ljobname{<< edu['school'] >>}
+\location{<<edu['start']>> - <<edu['end']>> }
+GPA: << edu['gpa'] >>\\
+<% endfor %>
+
+
+
+%------------------------------------------------
+% Skills
+%------------------------------------------------
+
+\section{Skills}
+
+\subsection{Programming Languages}
+
+Python  \textbullet{} SQL \textbullet{} C \textbullet{} C++  \textbullet{} R \textbullet{} MATLAB  \textbullet{} Java  
+
+\sectionspace
+
+\subsection{Tools/Applications}
+Git \textbullet{} AWS \textbullet{} Docker  \textbullet{} Tableau  
+\sectionspace
+\subsection{Libraries}
+PyTorch \textbullet{} OpenCV \textbullet{} Scikit-learn \textbullet{} Pandas \textbullet{} NumPy \textbullet{} TensorFlow
+\sectionspace
+\subsection{Operating Systems}
+Windows \textbullet{} Linux 
+
+\sectionspace
+
+
+
+%------------------------------------------------
+% Coursework
+%------------------------------------------------
+
+\section{Coursework}
+
+
+%------------------------------------------------
+
+
+
+Linear Algebra and Application  \\
+Business Analytics \\
+Comp Data Analysis \& Prod Dev \\
+VLSI Implementation for ML \\
+Prob \& Stats for Data Science \\
+Statistical Learning\\
+ML for Physical Applications\\
+Programming for Data Analysis
+
+\sectionspace 
+
+
+%------------------------------------------------
+% Links
+%------------------------------------------------
+
+\section{Links} 
+<% if github %>
+<< github >>\\
+<% endif %>
+
+<% if linkedin %>
+<< linkedin >> \\
+<% endif %>
+
+\sectionspace 
+
+
+\end{minipage} % The end of the right column
+
+
+
+\end{document}
